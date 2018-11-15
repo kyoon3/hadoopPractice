@@ -1,0 +1,43 @@
+2018-11-14 13:42:15,390 INFO [main] org.apache.hadoop.metrics2.impl.MetricsConfig: loaded properties from hadoop-metrics2.properties
+2018-11-14 13:42:15,492 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+2018-11-14 13:42:15,492 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: ReduceTask metrics system started
+2018-11-14 13:42:15,503 INFO [main] org.apache.hadoop.mapred.YarnChild: Executing with tokens:
+2018-11-14 13:42:15,503 INFO [main] org.apache.hadoop.mapred.YarnChild: Kind: mapreduce.job, Service: job_1542189090588_0014, Ident: (org.apache.hadoop.mapreduce.security.token.JobTokenIdentifier@5092eefe)
+2018-11-14 13:42:15,630 INFO [main] org.apache.hadoop.mapred.YarnChild: Sleeping for 0ms before retrying again. Got null now.
+2018-11-14 13:42:15,946 INFO [main] org.apache.hadoop.mapred.YarnChild: mapreduce.cluster.local.dir for child: /usr/local/hadoop/hadoop-2.6.0/tmp/nm-local-dir/usercache/root/appcache/application_1542189090588_0014
+2018-11-14 13:42:16,435 INFO [main] org.apache.hadoop.conf.Configuration.deprecation: session.id is deprecated. Instead, use dfs.metrics.session-id
+2018-11-14 13:42:16,827 INFO [main] org.apache.hadoop.mapred.Task:  Using ResourceCalculatorProcessTree : [ ]
+2018-11-14 13:42:16,861 INFO [main] org.apache.hadoop.mapred.ReduceTask: Using ShuffleConsumerPlugin: org.apache.hadoop.mapreduce.task.reduce.Shuffle@35c3cc65
+2018-11-14 13:42:16,877 INFO [main] org.apache.hadoop.mapreduce.task.reduce.MergeManagerImpl: MergerManager: memoryLimit=130652568, maxSingleShuffleLimit=32663142, mergeThreshold=86230696, ioSortFactor=10, memToMemMergeOutputsThreshold=10
+2018-11-14 13:42:16,879 INFO [EventFetcher for fetching Map Completion Events] org.apache.hadoop.mapreduce.task.reduce.EventFetcher: attempt_1542189090588_0014_r_000001_0 Thread started: EventFetcher for fetching Map Completion Events
+2018-11-14 13:42:16,885 INFO [EventFetcher for fetching Map Completion Events] org.apache.hadoop.mapreduce.task.reduce.EventFetcher: attempt_1542189090588_0014_r_000001_0: Got 1 new map-outputs
+2018-11-14 13:42:16,885 INFO [fetcher#1] org.apache.hadoop.mapreduce.task.reduce.ShuffleSchedulerImpl: Assigning master:13562 with 1 to fetcher#1
+2018-11-14 13:42:16,885 INFO [fetcher#1] org.apache.hadoop.mapreduce.task.reduce.ShuffleSchedulerImpl: assigned 1 of 1 to master:13562 to fetcher#1
+2018-11-14 13:42:16,908 INFO [fetcher#1] org.apache.hadoop.mapreduce.task.reduce.Fetcher: for url=13562/mapOutput?job=job_1542189090588_0014&reduce=1&map=attempt_1542189090588_0014_m_000000_0 sent hash and received reply
+2018-11-14 13:42:16,912 INFO [fetcher#1] org.apache.hadoop.mapreduce.task.reduce.Fetcher: fetcher#1 about to shuffle output of map attempt_1542189090588_0014_m_000000_0 decomp: 4466 len: 4470 to MEMORY
+2018-11-14 13:42:16,914 INFO [fetcher#1] org.apache.hadoop.mapreduce.task.reduce.InMemoryMapOutput: Read 4466 bytes from map-output for attempt_1542189090588_0014_m_000000_0
+2018-11-14 13:42:16,915 INFO [fetcher#1] org.apache.hadoop.mapreduce.task.reduce.MergeManagerImpl: closeInMemoryFile -> map-output of size: 4466, inMemoryMapOutputs.size() -> 1, commitMemory -> 0, usedMemory ->4466
+2018-11-14 13:42:16,916 INFO [EventFetcher for fetching Map Completion Events] org.apache.hadoop.mapreduce.task.reduce.EventFetcher: EventFetcher is interrupted.. Returning
+2018-11-14 13:42:16,916 INFO [fetcher#1] org.apache.hadoop.mapreduce.task.reduce.ShuffleSchedulerImpl: master:13562 freed by fetcher#1 in 32ms
+2018-11-14 13:42:16,920 INFO [main] org.apache.hadoop.mapreduce.task.reduce.MergeManagerImpl: finalMerge called with 1 in-memory map-outputs and 0 on-disk map-outputs
+2018-11-14 13:42:16,925 INFO [main] org.apache.hadoop.mapred.Merger: Merging 1 sorted segments
+2018-11-14 13:42:16,925 INFO [main] org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 1 segments left of total size: 4460 bytes
+2018-11-14 13:42:16,935 INFO [main] org.apache.hadoop.mapreduce.task.reduce.MergeManagerImpl: Merged 1 segments, 4466 bytes to disk to satisfy reduce memory limit
+2018-11-14 13:42:16,936 INFO [main] org.apache.hadoop.mapreduce.task.reduce.MergeManagerImpl: Merging 1 files, 4470 bytes from disk
+2018-11-14 13:42:16,936 INFO [main] org.apache.hadoop.mapreduce.task.reduce.MergeManagerImpl: Merging 0 segments, 0 bytes from memory into reduce
+2018-11-14 13:42:16,936 INFO [main] org.apache.hadoop.mapred.Merger: Merging 1 sorted segments
+2018-11-14 13:42:16,939 INFO [main] org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 1 segments left of total size: 4460 bytes
+2018-11-14 13:42:17,010 INFO [main] org.apache.hadoop.conf.Configuration.deprecation: mapred.skip.on is deprecated. Instead, use mapreduce.job.skiprecords
+2018-11-14 13:42:17,020 WARN [main] org.apache.hadoop.mapred.YarnChild: Exception running child : java.lang.ArrayIndexOutOfBoundsException: 1
+	at MovieScore$MovieScoreReducer.reduce(MovieScore.java:39)
+	at MovieScore$MovieScoreReducer.reduce(MovieScore.java:30)
+	at org.apache.hadoop.mapreduce.Reducer.run(Reducer.java:171)
+	at org.apache.hadoop.mapred.ReduceTask.runNewReducer(ReduceTask.java:627)
+	at org.apache.hadoop.mapred.ReduceTask.run(ReduceTask.java:389)
+	at org.apache.hadoop.mapred.YarnChild$2.run(YarnChild.java:163)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:421)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1692)
+	at org.apache.hadoop.mapred.YarnChild.main(YarnChild.java:158)
+
+2018-11-14 13:42:17,023 INFO [main] org.apache.hadoop.mapred.Task: Runnning cleanup for the task

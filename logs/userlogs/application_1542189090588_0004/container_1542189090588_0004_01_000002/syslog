@@ -1,0 +1,34 @@
+2018-11-14 12:49:20,990 INFO [main] org.apache.hadoop.metrics2.impl.MetricsConfig: loaded properties from hadoop-metrics2.properties
+2018-11-14 12:49:21,073 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+2018-11-14 12:49:21,073 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: MapTask metrics system started
+2018-11-14 12:49:21,091 INFO [main] org.apache.hadoop.mapred.YarnChild: Executing with tokens:
+2018-11-14 12:49:21,091 INFO [main] org.apache.hadoop.mapred.YarnChild: Kind: mapreduce.job, Service: job_1542189090588_0004, Ident: (org.apache.hadoop.mapreduce.security.token.JobTokenIdentifier@5e888f05)
+2018-11-14 12:49:21,188 INFO [main] org.apache.hadoop.mapred.YarnChild: Sleeping for 0ms before retrying again. Got null now.
+2018-11-14 12:49:21,394 INFO [main] org.apache.hadoop.mapred.YarnChild: mapreduce.cluster.local.dir for child: /usr/local/hadoop/hadoop-2.6.0/tmp/nm-local-dir/usercache/root/appcache/application_1542189090588_0004
+2018-11-14 12:49:21,881 INFO [main] org.apache.hadoop.conf.Configuration.deprecation: session.id is deprecated. Instead, use dfs.metrics.session-id
+2018-11-14 12:49:22,254 INFO [main] org.apache.hadoop.mapred.Task:  Using ResourceCalculatorProcessTree : [ ]
+2018-11-14 12:49:22,401 INFO [main] org.apache.hadoop.mapred.MapTask: Processing split: hdfs://Master:9000/ratings.csv:0+2483723
+2018-11-14 12:49:22,440 INFO [main] org.apache.hadoop.mapred.MapTask: (EQUATOR) 0 kvi 26214396(104857584)
+2018-11-14 12:49:22,440 INFO [main] org.apache.hadoop.mapred.MapTask: mapreduce.task.io.sort.mb: 100
+2018-11-14 12:49:22,440 INFO [main] org.apache.hadoop.mapred.MapTask: soft limit at 83886080
+2018-11-14 12:49:22,440 INFO [main] org.apache.hadoop.mapred.MapTask: bufstart = 0; bufvoid = 104857600
+2018-11-14 12:49:22,440 INFO [main] org.apache.hadoop.mapred.MapTask: kvstart = 26214396; length = 6553600
+2018-11-14 12:49:22,445 INFO [main] org.apache.hadoop.mapred.MapTask: Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer
+2018-11-14 12:49:22,461 INFO [main] org.apache.hadoop.mapred.MapTask: Starting flush of map output
+2018-11-14 12:49:22,469 WARN [main] org.apache.hadoop.mapred.YarnChild: Exception running child : java.lang.ArrayIndexOutOfBoundsException: 2
+	at MovieScore$MovieScoreMapper.map(MovieScore.java:25)
+	at MovieScore$MovieScoreMapper.map(MovieScore.java:18)
+	at org.apache.hadoop.mapreduce.Mapper.run(Mapper.java:145)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:784)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:341)
+	at org.apache.hadoop.mapred.YarnChild$2.run(YarnChild.java:163)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:421)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1692)
+	at org.apache.hadoop.mapred.YarnChild.main(YarnChild.java:158)
+
+2018-11-14 12:49:22,477 INFO [main] org.apache.hadoop.mapred.Task: Runnning cleanup for the task
+2018-11-14 12:49:22,481 WARN [main] org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter: Could not delete hdfs://Master:9000/mapreduce_output_sales_version2/_temporary/1/_temporary/attempt_1542189090588_0004_m_000000_0
+2018-11-14 12:49:22,486 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: Stopping MapTask metrics system...
+2018-11-14 12:49:22,487 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: MapTask metrics system stopped.
+2018-11-14 12:49:22,487 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: MapTask metrics system shutdown complete.
